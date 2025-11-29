@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS Ad Agency - Premium Digital Marketing</title>
+    <meta name="description" content="LS Ad Agency offers expert Meta Ad services for lead generation and direct selling with a focus on luxury results. Founded by Mr. Rudransh Sharma.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="WhatsApp Image 2025-11-28 at 05.00.47 (1).jpeg" alt="LS Ad Agency Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#founder">Founder</a></li>
+                    <li><a href="https://wa.link/3xpdaq" target="_blank" class="contact-btn">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="dark-section">
+        <div class="container">
+            <h1 class="fade-in-up">Elevate Your Brand. <span class="gold-text">Dominate The Market.</span></h1>
+            <p class="fade-in-up delay-2">Exclusive Meta Ad Services designed for exponential growth and high-value customer acquisition.</p>
+            <a href="#pricing" class="cta-button fade-in-up delay-4">View Premium Packages</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Signature **Meta Ad** Services</h2>
+            <div class="service-card animate-on-scroll">
+                <i class="fas fa-bullseye gold-text"></i>
+                <h3>Precision Targeting & Performance</h3>
+                <p>We craft high-converting ad copy and utilize advanced audience targeting on Meta Platforms (Facebook & Instagram) to ensure every rupee spent yields maximum return.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> High-Quality Lead Generation</li>
+                    <li><i class="fas fa-check-circle"></i> Direct Sales Optimization</li>
+                    <li><i class="fas fa-check-circle"></i> Transparent Reporting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="dark-section">
+        <div class="container">
+            <h2 class="section-title gold-text">Exclusive Ad Package Pricing</h2>
+            <p class="subtitle">Select the duration that aligns with your campaign goals.</p>
+
+            <div class="pricing-grid">
+                
+                <div class="price-card animate-on-scroll">
+                    <h3>The **Lead Starter**</h3>
+                    <p class="duration">**2 Days Ad Run**</p>
+                    <p class="price"><span class="currency">₹</span>129</p>
+                    <p class="benefit">**Best For Marketing Lead Acquisition**</p>
+                    <a href="https://wa.link/3xpdaq" target="_blank" class="select-btn">Start Campaign</a>
+                </div>
+
+                <div class="price-card featured animate-on-scroll">
+                    <h3>The **Sales Accelerator**</h3>
+                    <p class="duration">**7 Days Ad Run**</p>
+                    <p class="price"><span class="currency">₹</span>399</p>
+                    <p class="benefit">**Best For Direct Selling / High Volume Sales**</p>
+                    <a href="https://wa.link/3xpdaq" target="_blank" class="select-btn">Select Exclusive Plan</a>
+                </div>
+
+                <div class="price-card animate-on-scroll">
+                    <h3>The **Hybrid Dominator**</h3>
+                    <p class="duration">**14 Days Ad Run**</p>
+                    <p class="price"><span class="currency">₹</span>599</p>
+                    <p class="benefit">**Best For Sells & Sustained Marketing Lead Flow**</p>
+                    <a href="https://wa.link/3xpdaq" target="_blank" class="select-btn">Launch Hybrid Plan</a>
+                </div>
+
+            </div>
+            <p class="note">**Agency Service Fee Only.** Ad spend is managed separately.</p>
+        </div>
+    </section>
+
+    <section id="founder">
+        <div class="container">
+            <h2 class="section-title">Meet The Visionary</h2>
+            <div class="founder-content animate-on-scroll">
+                <div class="founder-photo">
+                    <img src="WhatsApp Image 2025-11-29 at 06.04.30.jpeg" alt="Photo of Mr. Rudransh Sharma">
+                </div>
+                <div class="founder-details">
+                    <h3>Mr. Rudransh Sharma</h3>
+                    <p class="gold-text">**Founder & Lead Strategist**</p>
+                    <p>Mr. Sharma's commitment to excellence and data-driven marketing forms the foundation of LS Ad Agency. His strategies are tailored to deliver not just clicks, but valuable business outcomes.</p>
+                    <a href="https://wa.link/3xpdaq" target="_blank" class="cta-button small">Consult with Rudransh</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-section">
+        <div class="container">
+            <p>&copy; 2025 LS Ad Agency. All rights reserved. | Powered by Excellence.</p>
+        </div>
+    </footer>
+    
+    <a href="https://wa.link/3xpdaq" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+</html>
