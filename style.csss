@@ -1,0 +1,464 @@
+/* --- LUXURY THEME COLORS --- */
+:root {
+    --color-primary: #0A1931; /* Deep Navy / Almost Black */
+    --color-secondary: #FFD700; /* Gold */
+    --color-text-light: #E0E0E0; /* Silver/Light Gray */
+    --color-text-dark: #333333; /* Dark Text */
+    --color-accent: #1F3768; /* Medium Navy for details */
+    --color-background-light: #F4F4F9;
+}
+
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-light);
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* --- HEADERS & SECTIONS --- */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.dark-section {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.section-title {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.dark-section .section-title {
+    color: var(--color-text-light);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--color-secondary);
+}
+
+.gold-text {
+    color: var(--color-secondary);
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px; 
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px 20px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-secondary);
+}
+
+.contact-btn {
+    background-color: var(--color-secondary);
+    color: var(--color-primary) !important;
+    padding: 10px 20px !important;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.contact-btn:hover {
+    background-color: #e6c200;
+}
+
+/* --- HERO SECTION --- */
+#hero {
+    padding: 150px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x800.png?text=Premium+Background');
+    /* Note: Replace placeholder with a high-res, dark background image */
+    background-size: cover;
+    background-position: center;
+}
+
+#hero h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+#hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: var(--color-text-light);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.3s;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background: #e6c200;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+.cta-button.small {
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+/* --- SERVICES SECTION --- */
+#services {
+    background-color: var(--color-background-light);
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 40px 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.service-card i {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.service-card ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.service-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ddd;
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+}
+
+.service-card ul li i {
+    color: #28a745;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+/* --- PRICING SECTION --- */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    border-radius: 12px;
+    padding: 40px 30px;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.5s, background 0.5s;
+    text-align: center;
+}
+
+.price-card:hover {
+    transform: scale(1.03);
+    background: var(--color-accent);
+}
+
+.price-card h3 {
+    color: var(--color-secondary);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.price-card .duration {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.price-card .price {
+    font-size: 4em;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.price-card .currency {
+    font-size: 0.5em;
+    vertical-align: super;
+}
+
+.price-card .benefit {
+    margin-bottom: 30px;
+    min-height: 40px;
+    font-size: 1.1em;
+}
+
+.price-card.featured {
+    background: linear-gradient(to bottom, var(--color-accent), var(--color-primary));
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    border: 3px solid var(--color-secondary);
+}
+
+.price-card.featured .select-btn {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.select-btn {
+    display: block;
+    background: var(--color-text-light);
+    color: var(--color-primary);
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.select-btn:hover {
+    background: #cccccc;
+}
+
+/* --- FOUNDER SECTION --- */
+.founder-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 50px;
+    max-width: 900px;
+    margin: 50px auto 0;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.founder-photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--color-secondary);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.founder-details h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+    font-size: 2.2em;
+}
+
+.founder-details p {
+    margin-bottom: 15px;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 30px 0;
+    border-top: 1px solid var(--color-accent);
+}
+
+/* --- FLOATING WHATSAPP BUTTON --- */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 34px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* --- ANIMATIONS (Fade-in and Scroll) --- */
+
+/* Simple Fade-in for Hero */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.delay-2 { animation-delay: 0.2s; }
+.delay-4 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    #hero h1 {
+        font-size: 3em;
+    }
+    .section-title {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header Collapse */
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+    }
+    nav ul li a {
+        padding: 8px 0;
+    }
+    .contact-btn {
+        margin-left: 0 !important;
+        margin-top: 10px;
+    }
+
+    /* General */
+    section {
+        padding: 60px 0;
+    }
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    /* Founder */
+    .founder-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    .founder-photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* WhatsApp button adjustment */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+}
